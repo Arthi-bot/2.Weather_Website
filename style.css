@@ -2,10 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 body{
-    background: linear-gradient(rgb(109, 137, 165),rgb(0, 39, 95));
+    background: linear-gradient(#2a5890, #0b396d, #041a35, #000000);
+    color: #ffffff;
 }
 .container{
     display: flex;
@@ -18,7 +21,7 @@ body{
 .left_container{
     width: 50%;
     height: max(100%, 650px);
-    background: rgba(195, 233, 233, 0.186);
+    background: rgba(195, 233, 233, 0.077);
     border-radius: 30px;
     padding: min(1.5em, 20%);
 }
@@ -38,14 +41,18 @@ body{
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
     position: relative;
-    background: rgba(255, 255, 255, 0.836);
+    background: rgba(195, 233, 233, 0.077);
     font-size: clamp(14px, 4vw, 24px);
     padding-left: 20px;
+    color: #ffffff;
+}
+.search_input::placeholder{
+    color: white;
 }
 .search_btn{
     border: 0;
     outline: 0;
-    background: rgba(255, 255, 255, 0.836);
+    background: rgba(195, 233, 233, 0.077);
     height: 80%;
     width: 70px;
     padding: 5px;
@@ -64,7 +71,7 @@ body{
 .error{
     margin-top: 10px;
     font-size: clamp(14px, 4vw, 26px);
-    color: black;
+    color: white;
 }
 /*details*/
 .details{
@@ -368,7 +375,6 @@ body{
     align-items: center;
     gap: 10px;
     font-size: clamp(20px, 2vw, 60px);
-    padding: 10px;
     font-weight: 600;
 }
 
@@ -420,12 +426,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: clamp(16px, 1.5vw, 30px);
     font-weight: 600;
 }
 .line{
-    background: black;
-    width: 500px;
+    background: #ffffff;
+    width: 50%;
     height: 3px;
 }
 .sunrise, .sunset{
@@ -443,9 +449,22 @@ body{
     padding-left: min(5rem, 5%);
     padding-right: min(5rem, 5%);
   }
-  .left_container, .right_container {
+  .left_container, .right_container{
     width: 100%;
     height: max(90dvh, 600px);
   }
 }
 
+@media (max-width: 400px) {
+  .right_container{
+    width: 100%;
+    height: auto;
+  }
+  .top_right_container .child_div{
+    background: rgba(138, 191, 210, 0.489);
+    width: 90%;
+    height: 30%;
+    border-radius: 20px;
+    font-size: clamp(16px, 1.5vw, 30px);
+}
+}
