@@ -15,6 +15,7 @@ async function weather_details(city) {
     else{
         //left container details
         document.getElementById("details").classList.add("active");
+        document.getElementById("details").style.background = "rgba(88, 110, 118, 0.489)"
         document.getElementById("details").classList.remove("inactive");
         document.getElementById("error").style.display = "none"
         var temperature = Math.round(weather_data.main.temp)

@@ -8,7 +8,7 @@
 }
 body{
     background: linear-gradient(#2a5890, #0b396d, #041a35, #000000);
-    color: #ffffff;
+    color: #e1f4ff;
 }
 .container{
     display: flex;
@@ -20,7 +20,7 @@ body{
 /*left_container*/
 .left_container{
     width: 50%;
-    height: max(100%, 650px);
+    height: 100%;
     background: rgba(195, 233, 233, 0.077);
     border-radius: 30px;
     padding: min(1.5em, 20%);
@@ -44,10 +44,10 @@ body{
     background: rgba(195, 233, 233, 0.077);
     font-size: clamp(14px, 4vw, 24px);
     padding-left: 20px;
-    color: #ffffff;
+    color: #e1f4ff;
 }
 .search_input::placeholder{
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .search_btn{
     border: 0;
@@ -71,12 +71,15 @@ body{
 .error{
     margin-top: 10px;
     font-size: clamp(14px, 4vw, 26px);
-    color: white;
+    color: #e1f4ff;
 }
 /*details*/
 .details{
     text-align: center;
     margin-top: 20px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 40px;
 }
 /*img*/
 .weather_img{   
@@ -330,19 +333,18 @@ body{
     width: 250px;
     height: 200px;
     z-index: 1;
-    animation: mist 1s linear 1s forwards;
+    animation: mist 0.5s linear 0.5s forwards;
+    opacity: 0;
 }
 .mist{
     width: 150px;
     height: 100px;
     margin-top: -80px;
     filter: grayscale(100%) opacity(0.7);
-    animation: mist 1s linear 1s forwards;
+    animation: mist 0.5s linear 0.5s forwards;
+    opacity: 0;
 }
 @keyframes mist{
-    0%{
-        opacity: 0;
-    }
     100%{
         opacity: 1;
     }
@@ -363,12 +365,9 @@ body{
 }
 .min_max_temp, .description{
     font-size: clamp(12px, 1.5vw, 30px);
-    margin: 10px;
+    margin: 5px;
 }
 /*country*/
-.country{
-    padding: 20px;
-}
 .place{
     display: flex;
     justify-content: center;
@@ -382,7 +381,7 @@ body{
 .right_container{
     width: 50%;
     height: max(100%, 650px);
-    background: rgba(195, 233, 233, 0.186);
+    background: rgba(195, 233, 233, 0.077);
     border-radius: 30px;
     padding: 20px;
 }
@@ -398,7 +397,7 @@ body{
     padding: 10px;
 }
 .top_right_container .child_div{
-    background: rgba(138, 191, 210, 0.489);
+    background: rgba(88, 110, 118, 0.489);
     width: 40%;
     height: 30%;
     border-radius: 20px;
@@ -419,7 +418,7 @@ body{
 }
 .sunrise_sunset{
     padding: 30px;
-    background: rgba(138, 191, 210, 0.489);
+    background: rgba(88, 110, 118, 0.489);
     width: 87%;
     height: auto;
     border-radius: 20px;
@@ -461,7 +460,6 @@ body{
     height: auto;
   }
   .top_right_container .child_div{
-    background: rgba(138, 191, 210, 0.489);
     width: 90%;
     height: 30%;
     border-radius: 20px;
